@@ -1,119 +1,153 @@
+//- Include all mixins
 include components/_mixins.pug
 
 doctype html
 html 
   head
+    //- header meta mixin import with Title and Webpage Description
     +headMeta('./', `Starlings Lab`, `Building the tools and technology for blockchain technology to help manage credit risks worldwide.`)
 
   body
+    //- nav bar mixin import
     +nav('./', 'home')
-
+    
+    //- hero section starts
     section.hero-section
       .title-wrapper
         h1 Building the tools and technology for blockchain technology to help manage credit risks worldwide
         p The core development team supporting the growth and success of the Carapace protocol
+    //- hero section ends
 
+    //- Team section starts here
     section.team-section
       .container
         .team-wrapper
+          //- Section title
           .title-wrapper
             h1.title Our Team
-          
+
+          //- Flexbox row starts
           .row.team-people-wrap
+            //- Team member starts | Vip
             .col-lg-4.col-md-4.col-sm-12.col-xs-12
               a(href="https://github.com/vnadoda" target="_blank") 
                 .team-card
+                  //- Team member image | Vip
                   .team-member-img
                     img(src="./assets/img/team/vip.jpeg", alt="")
-                  
+                  //- Team member description | Vip
                   .team-member-desc
                     p.name Vip
                     p.designation Founding Engineer
+            //- Team member ends | Vip
 
+            //- Team member starts | Tai
             .col-lg-4.col-md-4.col-sm-12.col-xs-12
               a(href="https://www.linkedin.com/in/taisuke-mino-1529801b4/" target="_blank") 
                 .team-card
+                  //- Team member image | Tai
                   .team-member-img
                     img(src="./assets/img/team/tai.jpeg", alt="")
-                  
+                  //- Team member description | Tai
                   .team-member-desc
                     p.name Tai
                     p.designation Co-Founder
+            //- Team member ends | Tai
 
+            //- Team member starts | Rohit
             .col-lg-4.col-md-4.col-sm-12.col-xs-12
               a(href="https://www.linkedin.com/in/rsabnis/" target="_blank") 
                 .team-card
+                  //- Team member image | Rohit
                   .team-member-img
                     img(src="./assets/img/team/rohit.jpeg", alt="")
-                  
+                  //- Team member description | Rohit
                   .team-member-desc
                     p.name Rohit
                     p.designation Co-Founder
+            //- Team member starts | Rohit
+    //- Team section ends here
 
+    //- Investors section starts here
     section.investors-section
       .container
         .investors-wrapper
+          //- Section title
           .title-wrapper
             h1.title Our Supporters
             p Starlings Lab is supported by top entrepreneurs and investors 
-          
+
+          //- Flexbox starts here
           .row.investor-ico-wrap
+            //- Investor card starts
             .col-lg-3.col-md-3.col-sm-12.col-xs-12
               a(href="https://www.nfx.com/" target="_blank") 
                 .investor-card
+                  //- Investor icon - NFX
                   .investor-ico
                     img(src="./assets/img/investors/nfx.svg", alt="")
-            
+            //- Investor card starts
             .col-lg-3.col-md-3.col-sm-12.col-xs-12
               a(href="https://tribecap.co/" target="_blank") 
                 .investor-card
+                  //- Investor icon - Tribe Capital
                   .investor-ico
                     img(src="./assets/img/investors/tribe-capital.svg", alt="")
-
+            //- Investor card starts
             .col-lg-3.col-md-3.col-sm-12.col-xs-12
               a(href="https://www.ledgerprime.com/" target="_blank") 
                 .investor-card
+                  //- Investor icon - Ledegr Prime
                   .investor-ico
                     img(src="./assets/img/investors/ledger-prime.svg", alt="")
-
+            //- Investor card starts
             .col-lg-3.col-md-3.col-sm-12.col-xs-12
               a(href="https://gsrventuresglobal.com/" target="_blank") 
                 .investor-card
+                  //- Investor icon - GRS Ventures
                   .investor-ico
                     img(src="./assets/img/investors/grs-ventures.svg", alt="")
-
+            //- Investor card starts
             .col-lg-3.col-md-3.col-sm-12.col-xs-12
               a(href="https://www.titancapital.vc/" target="_blank") 
                 .investor-card
+                  //- Investor icon - Titan Capital
                   .investor-ico
                     img(src="./assets/img/investors/titan-capital.svg", alt="")
-
+            //- Investor card starts
             .col-lg-3.col-md-3.col-sm-12.col-xs-12
               a(href="https://www.angeldao.org/" target="_blank") 
                 .investor-card
+                  //- Investor icon - AngelDao
                   .investor-ico
                     img(src="./assets/img/investors/angel-dao.svg", alt="")
 
-          .other-investors-wrap
+          //- Angels section starts here
+          .angels-wrap
+            //- Angel Card starts
             a(href="https://twitter.com/amysundae" target="_blank") 
-              .other-investor
-                .other-investor-img
+              .angel
+                .angel-img
                   img(src="./assets/img/investors/other/amy-sun.png", alt="")
-                p.other-investor-name Amy Sun
+                p.angel-name Amy Sun
             
+            //- Angel Card starts
             a(href="https://twitter.com/ChaseAdam17" target="_blank") 
-              .other-investor
-                .other-investor-img
+              .angel
+                .angel-img
                   img(src="./assets/img/investors/other/chase-adam.png", alt="")
-                p.other-investor-name Chase Adam
+                p.angel-name Chase Adam
             
+            //- Angel Card starts
             a(href="https://twitter.com/kaiynne" target="_blank") 
-              .other-investor
-                .other-investor-img
+              .angel
+                .angel-img
                   img(src="./assets/img/investors/other/kain.png", alt="")
-                p.other-investor-name Kain Warwick
+                p.angel-name Kain Warwick
           
+          //- Many More investors
           p.many-more-investors And many more...
+    //- Investors section ends here
 
     section.contact-section
       .contact-wrapper

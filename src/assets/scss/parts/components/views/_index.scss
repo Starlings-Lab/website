@@ -265,14 +265,14 @@ body {
       }
     }
 
-    .other-investors-wrap {
+    .angels-wrap {
       @include margin(($space + 2) auto ($space) auto);
       @include flexbox;
       @include align-items(center);
       @include justify-content(center);
       @include flex-direction(row);
 
-      .other-investor {
+      .angel {
         @include flexbox;
         @include align-items(center);
         @include justify-content(center);
@@ -299,11 +299,11 @@ body {
         }
 
         &:hover {
-          .other-investor-img {
+          .angel-img {
             filter: grayscale(0);
           }
 
-          .other-investor-name {
+          .angel-name {
             text-decoration: underline;
           }
         }
@@ -312,7 +312,7 @@ body {
       @media (max-width: 767px) and (orientation: portrait) {
         @include flex-direction(column);
 
-        .other-investor {
+        .angel {
           @include margin(0 ($space + 0.5) ($space + 1) ($space + 0.5));
 
           &-img {
