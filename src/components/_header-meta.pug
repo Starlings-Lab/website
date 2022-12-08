@@ -1,0 +1,19 @@
+mixin headMeta(pathPrefix = './', title = 'Starlings Lab', description = '')
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords" content="Starlings Lab, Hostel, Hostels in Bir, Hostels in Bir Billing, Hostels near me, Trippy Tribe Hostel, Best Hostels in Bir, Budget Hostels in Bir, Dorms in Bir, Best Hostels in Kasol, Budget Hostels in Kasol, Dorms in Kasol")
+
+    meta(property="og:type" content="website")
+    //- meta(property="og:url" content="<website url>/")
+    meta(property='og:description', content=`${description}`)
+    //- meta(property="og:image" content="<website url>/og.png")
+
+    title=title
+
+    meta(name='description', content=`${description}`)
+    link(rel='shortcut icon' href=`${pathPrefix}assets/img/favicon/favicon.ico`)
+    meta(name='msapplication-TileColor' content='#000000')
+    meta(name='theme-color' content='#000000')
+
+    link(rel="stylesheet", href=`${pathPrefix}assets/scss/style.scss`)

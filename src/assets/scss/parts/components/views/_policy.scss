@@ -1,0 +1,166 @@
+.policy-hero-section {
+  width: 100%;
+  height: 360px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+
+  &.contact {
+    background-image: url("../img/policy.jpg");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000003c;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 110;
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(255, 252, 252, 0) 40%
+    );
+
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  & .title-wrapper {
+    position: relative;
+    z-index: 120;
+
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto auto;
+
+    h1,
+    h2 {
+      margin: 0;
+      color: #ffffff;
+      font-family: $font-family-base;
+      font-weight: bolder;
+    }
+
+    h2 {
+      font-size: 42px;
+
+      .active {
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 4px;
+          background-color: #ffffff;
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) and (orientation: portrait){
+    height: 280px;
+
+    & .title-wrapper {
+      width: 100%;
+      padding: 0 4%;
+  
+      h2 {
+        font-size: 28px;
+  
+        .active {
+          position: relative;
+  
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.policy-section{
+  padding: 72px 0;
+  display: flex;
+
+  .policy-wrapper{
+    width: 60%;
+    margin: 0 auto;
+
+    .policy-para{
+      margin-bottom: 32px;
+
+      .title{
+        font-size: 28px !important;
+        margin-bottom: 4px !important;
+        line-height: 1.2;
+        text-align: left !important;
+
+        &::after{
+          content: ":";
+        }
+      }
+
+      ol{
+        list-style:decimal;
+        padding-left: 21px;
+        &.less-m{
+          li{
+            margin-bottom: 12px;
+          }
+        }
+        li{
+          font-weight: 300;
+          margin-bottom: 16px;
+        }
+      }
+
+      p{
+        position: relative;
+        text-align: justify;
+
+        a{
+          color: #e56d2d;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) and (orientation: portrait){
+    .policy-wrapper{
+      width: 100%;
+      padding: 0 4%;
+
+      .policy-para{
+        .title{
+          font-size: 21px !important;
+        }
+      }
+
+      li{
+        font-size: 14px;
+      }
+    }
+  }
+}

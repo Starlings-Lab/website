@@ -1,0 +1,127 @@
+.footer {
+  &-section {
+    border-top: 0.01rem solid #6b7280;
+    @include size(100%, auto);
+    @include padding(($space + 1.5) 0 ($space) 0);
+  }
+
+  &-wrapper {
+    @include flexbox;
+    padding-bottom: $space;
+
+    .footer-logo-wrap {
+      width: 360px;
+
+      p {
+        padding-left: 74px;
+        font-size: 14px;
+      }
+    }
+
+    .footer-social-wrap {
+      margin-left: auto;
+
+      .f-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 21px;
+      }
+
+      ul {
+        li {
+          color: #9ca3af;
+          font-size: 16px;
+          margin-bottom: 12px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: $light;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 767px) and (orientation: portrait) {
+      @include flex-direction(column);
+
+      .footer-logo-wrap {
+        width: 100%;
+        margin-bottom: $space+1;
+
+        p{
+          padding-left: 50px;
+          width: 80%;
+        }
+      }
+  
+      .footer-social-wrap {
+        margin-left: 0;
+        margin-bottom: $space+1;
+      }
+    }
+  }
+
+  &-lower-wrapper {
+    @include padding(($space) 0 0 0);
+    border-top: 1px solid #6b7280;
+    position: relative;
+
+    p{
+      margin: 0;
+      font-size: 16px;
+      color: #9CA3AF;
+    }
+
+    &::after,
+    &::before{
+      content: "";
+      
+      height: 40px;
+
+      position: absolute;
+      top: -50%;
+      left: 50%;
+
+      transform: translateX(-50%);
+    } 
+
+    &::after {
+      width:  40px;
+      z-index: 3;
+
+      @include background-img(
+        "../img/logo-short.svg",
+        center,
+        no-repeat,
+        contain
+      );
+    }
+
+    &::before {
+      width:  60px;
+      z-index: 2;
+
+      background-color: $dark;
+    }
+
+    @media (max-width: 767px) and (orientation: portrait) {
+      @include padding(($space+0.5) 0 0 0);
+
+      p{
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  &-logo {
+    @include size(196px, 48px);
+
+    svg {
+      @include size(100%, 100%);
+    }
+  }
+}

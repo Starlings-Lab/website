@@ -1,0 +1,21 @@
+mixin footer(pathPrefix = './')
+  footer.footer-section
+    .container
+      .footer-wrapper
+        .footer-logo-wrap
+          .footer-logo
+            +fullLogo()
+          p The core development team supporting the growth and success of the Carapace protocol
+        
+        .footer-social-wrap
+          p.f-title Social
+
+          ul 
+            li
+              a(href="https://github.com/starlings-lab" target="_blank") GitHub
+            li
+              a(href="https://angel.co/company/starlings-lab" target="_blank") Angelist
+      
+      .footer-lower-wrapper
+        p © 2022 Starlings Lab. All rights reserved.
+        

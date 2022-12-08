@@ -1,0 +1,126 @@
+include components/_mixins.pug
+
+doctype html
+html 
+  head
+    +headMeta('./', `Starlings Lab`, `Building the tools and technology for blockchain technology to help manage credit risks worldwide.`)
+
+  body
+    +nav('./', 'home')
+
+    section.hero-section
+      .title-wrapper
+        h1 Building the tools and technology for blockchain technology to help manage credit risks worldwide
+        p The core development team supporting the growth and success of the Carapace protocol
+
+    section.team-section
+      .container
+        .team-wrapper
+          .title-wrapper
+            h1.title Our Team
+          
+          .row.team-people-wrap
+            .col-lg-4.col-md-4.col-sm-12.col-xs-12
+              a(href="https://github.com/vnadoda" target="_blank") 
+                .team-card
+                  .team-member-img
+                    img(src="./assets/img/team/vip.jpeg", alt="")
+                  
+                  .team-member-desc
+                    p.name Vip
+                    p.designation Founding Engineer
+
+            .col-lg-4.col-md-4.col-sm-12.col-xs-12
+              a(href="https://www.linkedin.com/in/taisuke-mino-1529801b4/" target="_blank") 
+                .team-card
+                  .team-member-img
+                    img(src="./assets/img/team/tai.jpeg", alt="")
+                  
+                  .team-member-desc
+                    p.name Tai
+                    p.designation Co-Founder
+
+            .col-lg-4.col-md-4.col-sm-12.col-xs-12
+              a(href="https://www.linkedin.com/in/rsabnis/" target="_blank") 
+                .team-card
+                  .team-member-img
+                    img(src="./assets/img/team/rohit.jpeg", alt="")
+                  
+                  .team-member-desc
+                    p.name Rohit
+                    p.designation Co-Founder
+
+    section.investors-section
+      .container
+        .investors-wrapper
+          .title-wrapper
+            h1.title Our Supporters
+            p Starlings Lab is supported by top entrepreneurs and investors 
+          
+          .row.investor-ico-wrap
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              a(href="https://www.nfx.com/" target="_blank") 
+                .investor-card
+                  .investor-ico
+                    img(src="./assets/img/investors/nfx.svg", alt="")
+            
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              a(href="https://tribecap.co/" target="_blank") 
+                .investor-card
+                  .investor-ico
+                    img(src="./assets/img/investors/tribe-capital.svg", alt="")
+
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              a(href="https://www.ledgerprime.com/" target="_blank") 
+                .investor-card
+                  .investor-ico
+                    img(src="./assets/img/investors/ledger-prime.svg", alt="")
+
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              a(href="https://gsrventuresglobal.com/" target="_blank") 
+                .investor-card
+                  .investor-ico
+                    img(src="./assets/img/investors/grs-ventures.svg", alt="")
+
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              a(href="https://www.titancapital.vc/" target="_blank") 
+                .investor-card
+                  .investor-ico
+                    img(src="./assets/img/investors/titan-capital.svg", alt="")
+
+            .col-lg-3.col-md-3.col-sm-12.col-xs-12
+              a(href="https://www.angeldao.org/" target="_blank") 
+                .investor-card
+                  .investor-ico
+                    img(src="./assets/img/investors/angel-dao.svg", alt="")
+
+          .other-investors-wrap
+            a(href="https://twitter.com/amysundae" target="_blank") 
+              .other-investor
+                .other-investor-img
+                  img(src="./assets/img/investors/other/amy-sun.png", alt="")
+                p.other-investor-name Amy Sun
+            
+            a(href="https://twitter.com/ChaseAdam17" target="_blank") 
+              .other-investor
+                .other-investor-img
+                  img(src="./assets/img/investors/other/chase-adam.png", alt="")
+                p.other-investor-name Chase Adam
+            
+            a(href="https://twitter.com/kaiynne" target="_blank") 
+              .other-investor
+                .other-investor-img
+                  img(src="./assets/img/investors/other/kain.png", alt="")
+                p.other-investor-name Kain Warwick
+          
+          p.many-more-investors And many more...
+
+    section.contact-section
+      .contact-wrapper
+        h1 Lets build the financial infrastructure of tomorrow
+          
+        a(href="mailto:mailto:tai@carapace.finance" class="btn") Contact Us
+
+    +footer()
+        
+    script(src="./assets/ts/app.ts" type="module")

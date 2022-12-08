@@ -1,0 +1,44 @@
+{
+  "name": "starlings-lab",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "concurrently \"yarn run prebuild\" \"yarn run parcel-dev\"",
+    "build": "concurrently \"yarn run prebuild\" \"yarn run parcel-build\"",
+    "prebuild": "rm -rf dist",
+    "postbuild": "cp _redirects robots.txt sitemap.xml dist",
+    "parcel-dev": "parcel src/*.pug --dist-dir ./dist --port 3700 --no-cache",
+    "parcel-build": "parcel build src/*.pug --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/starlings-lab/website.git"
+  },
+  "author": "Niitn Bhardwaj",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "scrollmagic": "^2.0.8",
+    "smooth-scroll": "^16.1.3"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.6.1",
+    "@parcel/transformer-image": "^2.6.1",
+    "@parcel/transformer-pug": "^2.6.1",
+    "@parcel/transformer-sass": "^2.6.1",
+    "@parcel/transformer-webmanifest": "^2.6.1",
+    "@types/animejs": "^3.1.4",
+    "@types/scrollmagic": "^2.0.2",
+    "@types/smooth-scroll": "^16.1.1",
+    "concurrently": "^7.2.2",
+    "copyfiles": "^2.4.1",
+    "parcel": "^2.6.1",
+    "posthtml-img-autosize": "^0.1.6",
+    "posthtml-modules": "^0.9.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.54.9",
+    "typescript": "^4.7.4"
+  }
+}

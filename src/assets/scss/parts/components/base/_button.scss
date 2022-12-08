@@ -1,0 +1,16 @@
+.btn{
+  background-color: #62D5C9;
+  @include padding(($space - 0.5) ($space+0.25));
+  border-radius: 21px;
+  color: $dark !important;
+  border: none;
+  transition: all 0.2s ease-in;
+
+  &:hover { 
+    box-shadow: #66a09aba 0px 7px 29px 0px;
+  }
+
+  @media (max-width: 767px) and (orientation: portrait) {
+   font-size: 14px;
+  }
+}

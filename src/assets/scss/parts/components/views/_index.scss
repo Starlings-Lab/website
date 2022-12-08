@@ -1,0 +1,411 @@
+body {
+  background-color: $dark;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  @include size(100%, 800px);
+
+  @include background-img(
+    "../img/home/hero.png",
+    center right,
+    no-repeat,
+    contain
+  );
+
+  position: relative;
+  overflow: hidden;
+
+  & .title-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+
+    transition: width 0.1s;
+    padding: 0 15%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    @media (min-width: 640px) {
+      width: 640px;
+    }
+    @media (min-width: 768px) {
+      width: 768px;
+    }
+    @media (min-width: 1024px) {
+      width: 1024px;
+    }
+    @media (min-width: 1280px) {
+      width: 1280px;
+    }
+    @media (min-width: 1536px) {
+      width: 1536px;
+    }
+
+    h1 {
+      margin-bottom: $space + 0.5;
+      color: #ffffff;
+      text-align: center;
+      font-size: 48px;
+    }
+
+    p {
+      color: #9ca3af;
+      font-size: 22px;
+      width: 70%;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  & .scroll-down {
+    opacity: 0.6;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    bottom: 40px;
+    height: 40px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 20px;
+
+    &::before {
+      animation: scrollDownAnimation 2s infinite;
+      background-color: #fff;
+      border-radius: 100%;
+      content: "";
+      height: 2px;
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 2px;
+    }
+  }
+
+  @media (max-width: 767px) and (orientation: portrait) {
+    @include size(100%, 100vh);
+    @include background-img(
+      "../img/home/hero.png",
+      center,
+      no-repeat,
+      cover
+    );
+
+    & .title-wrapper {
+      padding: 0 5%;
+
+      h1 {
+        margin-bottom: $space;
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        width: 80%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@keyframes scrollDownAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+    transform: translate(0, 8px);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.team,
+.investors {
+  &-section {
+    @include size(100%, auto);
+    @include padding(($space * 3) 0 ($space * 6) 0);
+    overflow: hidden;
+  }
+
+  &-wrapper {
+    & .title-wrapper {
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);
+      @include flex-direction(column);
+
+      p {
+        margin-top: $space;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 767px) and (orientation: portrait) {
+    &-section {
+      @include padding(($space * 1.5) 0 ($space * 3) 0);
+    }
+  }
+}
+
+.team {
+  &-wrapper {
+    & .team-people-wrap {
+      width: 65%;
+      @include margin(($space + 4) auto 0 auto);
+
+      .team-card {
+        height: 420px;
+        width: 100%;
+        background-color: #1f1f29;
+        @include padding($space + 0.25);
+        margin-bottom: ($space + 1);
+
+        & .team-member-img {
+          width: 100%;
+          height: calc(100% - 60px);
+          filter: grayscale(100%);
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        & .team-member-desc {
+          height: 60px;
+          padding-top: $space;
+
+          .name,
+          .designation {
+            color: $light;
+            margin: 0;
+          }
+
+          .name {
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .designation {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 767px) and (orientation: portrait) {
+      & .team-people-wrap {
+        width: 85%;
+        @include margin(($space + 2) auto 0 auto);
+      }
+    }
+  }
+}
+
+.investors {
+  &-wrapper {
+    .investor-ico-wrap {
+      @include margin(($space + 1) auto ($space) auto);
+      @include align-items(center);
+      @include justify-content(center);
+
+      & > div {
+        padding: 0;
+      }
+
+      .investor-card {
+        @include size(100%, 180px);
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-direction(column);
+
+        position: relative;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          border: 0.01rem solid #6b7280;
+        }
+
+        .investor-ico {
+          @include size(auto, 40px);
+          img {
+            @include size(100%, 100%);
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+
+        @media (max-width: 767px) and (orientation: portrait) {
+          .investor-ico {
+            @include size(auto, 44px);
+          }
+        }
+      }
+    }
+
+    .other-investors-wrap {
+      @include margin(($space + 2) auto ($space) auto);
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);
+      @include flex-direction(row);
+
+      .other-investor {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-direction(column);
+        @include margin(0 ($space + 0.5));
+
+        &-img {
+          background-color: $light;
+          @include size(100px, 100px);
+          filter: grayscale(100%);
+          transition: all 0.3s ease-in-out;
+
+          img {
+            @include size(100%, 100%);
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        &-name {
+          @include margin(($space - 0.75) auto 0 auto);
+          font-size: 14px;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          .other-investor-img {
+            filter: grayscale(0);
+          }
+
+          .other-investor-name {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      @media (max-width: 767px) and (orientation: portrait) {
+        @include flex-direction(column);
+
+        .other-investor {
+          @include margin(0 ($space + 0.5) ($space + 1) ($space + 0.5));
+
+          &-img {
+            @include size(120px, 120px);
+          }
+        }
+      }
+    }
+
+    .many-more-investors {
+      text-align: center;
+      font-size: 18px;
+      @include margin(($space + 2) auto 0 auto);
+      color: #9ca3af;
+
+      @media (max-width: 767px) and (orientation: portrait) {
+        @include margin(($space) auto 0 auto);
+      }
+    }
+  }
+}
+
+.contact {
+  &-section {
+    @include size(100%, 320px);
+    @include background-img(
+      "../img/helpers/footer.png",
+      center bottom,
+      no-repeat,
+      cover
+    );
+    position: relative;
+  }
+
+  &-wrapper {
+    @include size(50%, 320px);
+
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    h1,
+    a {
+      color: $light;
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) and (orientation: portrait) {
+      @include size(90%, 320px);
+    }
+  }
+}
+
+.title {
+  color: $light;
+  width: fit-content;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 420px;
+    height: 32px;
+
+    @include background-img(
+      "../img/helpers/underline.png",
+      center,
+      no-repeat,
+      contain
+    );
+
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+
+    transform: translateX(-20%);
+  }
+
+  @media (max-width: 767px) and (orientation: portrait) {
+    &::after {
+      content: "";
+      width: 320px;
+      height: 26px;
+    }
+  }
+}

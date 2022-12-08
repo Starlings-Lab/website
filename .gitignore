@@ -1,0 +1,13 @@
+#node modules
+node_modules
+
+#parcel cache files
+.cache
+.parcel-cache
+.DS_Store
+
+#vs-code
+.vscode
+
+#dist folder
+dist
