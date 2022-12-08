@@ -6,7 +6,7 @@
     "dev": "concurrently \"yarn run prebuild\" \"yarn run parcel-dev\"",
     "build": "concurrently \"yarn run prebuild\" \"yarn run parcel-build\"",
     "prebuild": "rm -rf dist",
-    "postbuild": "cp _redirects robots.txt sitemap.xml dist",
+    "postbuild": "cp _redirects robots.txt sitemap.xml og.png dist",
     "parcel-dev": "parcel src/*.pug --dist-dir ./dist --port 3700 --no-cache",
     "parcel-build": "parcel build src/*.pug --dist-dir ./dist"
   },
