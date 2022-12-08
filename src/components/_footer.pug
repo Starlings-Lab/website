@@ -6,8 +6,8 @@ mixin footer(pathPrefix = './')
         .footer-logo-wrap
           //- Footer Logo with text
           .footer-logo
-            +fullLogo()
-          p The core development team supporting the growth and success of the Carapace protocol
+            img(src=`${pathPrefix}assets/img/logo-text.svg`, alt="")
+          p.hidden-text The core development team supporting the growth and success of the Carapace protocol  
         
         .footer-social-wrap
           p.f-title Social

@@ -184,6 +184,7 @@ body {
           width: 100%;
           height: calc(100% - 60px);
           filter: grayscale(100%);
+          transition: all 0.3s ease-in-out;
 
           img {
             width: 100%;
@@ -209,6 +210,12 @@ body {
           }
           .designation {
             font-size: 13px;
+          }
+        }
+
+        &:hover{
+          & .team-member-img {
+            filter: grayscale(0);
           }
         }
       }
